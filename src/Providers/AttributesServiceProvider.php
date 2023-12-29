@@ -73,7 +73,7 @@ class AttributesServiceProvider extends ServiceProvider
             __DIR__.'/../../config/config.php' => config_path('rinvex.attributes.php'),
         ], 'rinvex/attributes::config');
         $this->publishes([
-            __DIR__.'/../../database/migrations/rinvex/attributes/' => database_path('migrations')
+            __DIR__.'/../../database/migrations/' => database_path('migrations/rinvex/laravel-attributes/')
         ], 'rinvex/attributes::migrations');
         if (! $this->app->runningInConsole()) {
             $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
