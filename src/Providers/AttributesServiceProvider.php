@@ -32,6 +32,9 @@ class AttributesServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        Attribute::typeMap([
+            'varchar' => \Rinvex\Attributes\Models\Type\Varchar::class,
+        ]);
         // Merge config
         $this->mergeConfigFrom(realpath(__DIR__.'/../../config/config.php'), 'rinvex.attributes');
 
